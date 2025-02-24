@@ -1,0 +1,156 @@
+@media (min-width: 400px) {
+  .hero-section .content .links {
+    flex-direction: row;
+  }
+}
+@media (min-width: 768px) {
+  nav .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .chefs-section .container {
+    flex-direction: row;
+  }
+
+  .contact .info-contact {
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+  }
+  .contact .info-contact .box {
+    width: 48%;
+  }
+  .chefs-section .container {
+    width: 70%;
+  }
+  .our-gallery .container {
+    flex-direction: row;
+    gap: 10px;
+  }
+  .our-gallery .container .col {
+    width: 45%;
+  }
+  .our-gallery .container .col.col1 {
+    order: 2;
+  }
+  .our-gallery .container .col.col2 {
+    order: 3;
+  }
+  .our-gallery .container .col.col3 {
+    order: 1;
+  }
+
+  .footer .container {
+    flex-direction: row;
+    gap: 20px;
+  }
+  .footer .container .about {
+    width: 45%;
+  }
+
+  .footer .container .get-details {
+    order: 2;
+    width: 45%;
+  }
+}
+@media (min-width: 800px) {
+  .chefs-section .container {
+    width: 85%;
+  }
+  .chefs-section .container .box {
+    width: 45%;
+  }
+}
+@media (min-width: 992px) {
+  .hero-section .links button {
+    border-top-left-radius: 0;
+  }
+  .hero-section .content .container {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .hero-section .content .container .text {
+    text-align: start;
+    flex-basis: 40%;
+  }
+  .hero-section .image {
+    flex-basis: 40%;
+  }
+
+  .hero-section .content .links {
+    justify-content: start;
+  }
+  .hero-section .content .icon a i {
+    margin-right: 6px;
+  }
+  .chefs-section .container {
+    justify-content: center;
+  }
+  .chefs-section .container .box {
+    width: 30%;
+  }
+  .contact form .flex {
+    flex-direction: row;
+  }
+  .contact form .flex input {
+    width: 48%;
+  }
+  .contact form .flex .inpt3 {
+    width: 98%;
+  }
+  .get-details h3 {
+    margin: 0;
+  }
+  .get-details ul li p {
+    margin: 8px 0;
+  }
+  .footer .subscribe {
+    margin-top: 0px;
+  }
+  .footer .quick-links {
+    margin-top: 0px;
+  }
+  .footer .container {
+    margin-top: 20px;
+  }
+  .our-gallery .container .col {
+    width: 30%;
+  }
+  .our-gallery .container .col.col1 {
+    order: 1;
+  }
+  .our-gallery .container .col.col2 {
+    order: 2;
+  }
+  .our-gallery .container .col.col3 {
+    order: 3;
+  }
+  .chefs-section .container .box {
+    width: 30%;
+  }
+}
+@media (min-width: 1100px) {
+  .footer .container .about,
+  .footer .container .get-details {
+    width: 23%;
+  }
+  .footer .container .sub-and-links {
+    width: 45%;
+  }
+  .footer .subscribe form {
+    display: flex;
+  }
+  .footer .subscribe form button {
+    width: fit-content;
+    padding: 10px 15px;
+    margin: 10px;
+  }
+  .footer .subscribe form button {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  .footer .subscribe form input {
+    width: 80%;
+  }
+}

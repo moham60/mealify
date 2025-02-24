@@ -1,0 +1,593 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  color: var(--default-color);
+}
+
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  margin: 0;
+}
+:root {
+  --bg-secondary: #eeeeee;
+  --bg-white: #ffffff;
+  --main-color: #ce1212;
+  --hover-color: #e61414;
+  --py-lg-section: 120px;
+  --py-md-section: 80px;
+  --gap-inline: 20px;
+  --default-color: #212529;
+  --color-gray: #9f9f9f;
+}
+a {
+  text-decoration: none;
+}
+/*utility classes*/
+.text-center {
+  text-align: center;
+}
+.vertical-align {
+  vertical-align: middle;
+}
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+.clear-fix {
+  clear: both;
+}
+.w-100 {
+  width: 100%;
+}
+/*component*/
+.container {
+  width: 85%;
+  margin: auto;
+}
+/*hero section*/
+.hero-section {
+  background-color: var(--bg-secondary);
+  
+}
+
+nav {
+  background-color: white;
+  box-shadow: 0 0 15px #eee;
+  padding-block: 25px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+}
+nav li {
+  margin-left: 25px;
+}
+li a {
+  color: var(--color-gray);
+}
+nav li a {
+  font-size: 17px;
+  position: relative;
+  transition: 0.5s color;
+  padding: 10px 0;
+}
+
+nav ul li a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  background-color: var(--hover-color);
+  bottom: 0px;
+  height: 2px;
+  transition: 0.5s width;
+}
+nav ul li a:hover::before {
+  width: 100%;
+}
+ul li a:hover {
+  color: var(--default-color);
+}
+nav .container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 700;
+}
+.logo span {
+  color: var(--main-color);
+}
+
+nav .dark-mode i {
+  font-size: 25px;
+  margin: 0 2px;
+  cursor: pointer;
+}
+.hero-section img {
+  filter: drop-shadow(10px 10px 10px black);
+}
+.hero-section img:hover {
+  animation: anim 1s infinite linear;
+}
+@keyframes anim {
+  0% {
+    transform: translate(0) rotate(0);
+  }
+  15% {
+    transform: translate(1px) rotate(1deg);
+  }
+  30% {
+    transform: translate(-3px, -1px) rotate(-1deg);
+  }
+  45% {
+    transform: translate(-3px, 1px) rotate(1deg);
+  }
+  60% {
+    transform: translate(-1px, -2px) rotate();
+  }
+  75% {
+    transform: translate(-3px, 2px) rotate(-1deg);
+  }
+  90% {
+    transform: translate(-1px) rotate(1deg);
+  }
+}
+.hero-section .content {
+  padding-block: var(--py-lg-section);
+}
+.hero-section .content .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3.5rem;
+}
+.hero-section .content h2 {
+  font-size: 65px;
+  font-family: "Amatic SC", system-ui;
+  font-weight: 700;
+  max-width: 450px;
+  margin: auto;
+}
+.hero-section .content p {
+  color: var(--color-gray);
+  line-height: 26px;
+}
+
+.hero-section .content button {
+  background-color: var(--main-color);
+  border: none;
+  border-radius: 25px;
+  padding: 15px 25px;
+  transition: 0.4s;
+}
+.hero-section .content button:hover {
+  background-color: var(--hover-color);
+}
+.hero-section .content button a {
+  color: white;
+}
+.hero-section .content .links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25px;
+  align-items: center;
+}
+.hero-section .content .icon a {
+  font-weight: 600;
+  position: relative;
+  color: var(--default-color);
+  transition: 1s;
+}
+.hero-section .content .icon:hover a {
+  color: var(--hover-color);
+}
+
+.hero-section .content .icon a::before {
+  position: absolute;
+  content: "";
+  left: 18px;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(40deg);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 10px solid;
+  border-color: transparent transparent var(--main-color) var(--main-color);
+}
+.hero-section .content .icon a i {
+  border-radius: 50%;
+  background-color: var(--bg-white);
+  padding: 10px;
+}
+/*end hero*/
+/*start chefs*/
+.chefs-section {
+  padding-block: var(--py-md-section);
+}
+.title h2 {
+  text-transform: uppercase;
+  color: var(--color-gray);
+  font-size: 14px;
+}
+.title p {
+  text-transform: uppercase;
+  font-size: 50px;
+  font-family: "Amatic SC", system-ui;
+  margin: 10px 0;
+}
+.title p span {
+  color: var(--main-color);
+}
+.chefs-section .container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 35px;
+  margin-top: 45px;
+}
+.chefs-section .container .box {
+  border-radius: 10px;
+  transition: 0.5s transform;
+}
+.chefs-section .container .box:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.chefs-section .container .box .text {
+  background-color: white;
+  box-shadow: 0 0 10px #eee;
+  padding: 15px;
+}
+.chefs-section .container .box .text span,
+.chefs-section .container .box .text p {
+  color: var(--color-gray);
+  margin: 10px 0;
+}
+.chefs-section .container .box .text p {
+  font-style: italic;
+}
+
+.chefs-section .container .box img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: block;
+}
+.chefs-section .container .box .image {
+  position: relative;
+  overflow: hidden;
+}
+.chefs-section .container .box .image::before {
+  content: "";
+  background: url("../images/team-shape.svg");
+  position: absolute;
+  width: 100%;
+  height: 250px;
+  bottom: -200px;
+  background-repeat: repeat-x;
+}
+.chefs-section .container .box .image .social-icon {
+  position: absolute;
+  right: -35px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  transition: 0.5s right 0.5s;
+}
+.chefs-section .container .box:hover .image .social-icon {
+  right: 10px;
+}
+.chefs-section .container .box .image .social-icon ul {
+  flex-direction: column;
+  background-color: #dbd5d0d7;
+  border-radius: 5px;
+  align-items: center;
+  padding: 10px;
+}
+.chefs-section .container .box .image .social-icon ul li {
+  margin-bottom: 10px;
+}
+
+/*end chefs*/
+/* start gallery*/
+.our-gallery {
+  padding-block: var(--py-md-section);
+  background-color: var(--bg-secondary);
+}
+.our-gallery .container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.our-gallery .container .row {
+  position: relative;
+  margin-top: 10px;
+  border: 4px solid white;
+  overflow: hidden;
+}
+img {
+  transition: 1s;
+}
+
+.our-gallery .container .row .overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  height: 0%;
+  width: 100%;
+  background-color: #0000008c;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  transition: 1s;
+  overflow: hidden;
+  padding: 10px 25px;
+}
+
+.our-gallery .container .row:hover .overlay {
+  opacity: 1;
+  height: 100%;
+}
+.our-gallery .container .row:hover img {
+  transform: scale(1.2);
+}
+
+/*end gallery*/
+/* start contact*/
+.contact {
+  padding-block: var(--py-md-section);
+}
+.contact .info-contact {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.contact .box {
+  background-color: var(--bg-secondary);
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+  padding: 15px 10px;
+}
+.contact .box .icon {
+  margin: 0 10px;
+}
+.contact .box .icon i {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+.contact .box .text p {
+  margin: 0;
+}
+.contact .box .text h3 {
+  color: #7d7d7d;
+  font-weight: 700;
+  margin: 4px 0;
+  font-size: 20px;
+}
+.contact form {
+  margin-top: 20px;
+  padding: 20px 0;
+  background-color: white;
+  box-shadow: 0 0 4px;
+}
+.contact form .flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.contact form input {
+  padding: 18px 10px;
+  display: block;
+  width: 95%;
+  margin: 10px auto;
+  border: 1px solid #eeeeee;
+  transition: 0.3s;
+}
+
+.contact form button {
+  padding: 10px 18px;
+  border-radius: 15px;
+  border: none;
+  background-color: var(--main-color);
+  color: white;
+  display: block;
+  margin: auto;
+  transition: 0.5s background-color;
+  cursor: pointer;
+}
+.contact form button:hover {
+  background-color: var(--hover-color);
+}
+.contact form textarea {
+  display: block;
+  margin: auto;
+  width: 98%;
+  margin-bottom: 20px;
+  padding: 10px;
+  resize: both;
+  border: 1px solid #eeeeee;
+  transition: 0.3s;
+  resize: vertical;
+}
+.contact form input:focus,
+textarea:focus {
+  outline: 2px solid var(--hover-color);
+}
+/*end contact*/
+/*start footer*/
+.footer {
+  background-image: url("../images/textured-metal-background.jpg");
+  background-position: center;
+  background-size: contain;
+  position: relative;
+  color: white;
+  padding: 20px 0;
+}
+.footer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-color: rgba(0, 0, 0, 0.651);
+}
+.footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+}
+
+.footer .logo {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.footer .logo img {
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+}
+.footer .logo h2 {
+  font-size: 30px;
+}
+.footer .logo h2 span {
+  color: var(--main-color);
+}
+.footer .about p {
+  margin-top: 10px 0;
+}
+.footer .about {
+  padding: 10px 0;
+}
+.footer .about .social-icons h3 {
+  border-bottom: 2px solid rgb(68, 66, 66);
+  padding: 10px 0;
+}
+
+.footer .social-icons ul {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+.footer .social-icons ul li {
+  margin: 0 25px;
+}
+.footer .social-icons ul li a i {
+  color: white;
+  font-size: 25px;
+}
+
+.footer .subscribe {
+  margin-top: 30px;
+}
+.footer .subscribe h3 {
+  font-weight: 700;
+}
+.footer .subscribe form input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+.footer .subscribe form button {
+  width: 100%;
+  background-color: var(--main-color);
+  color: white;
+  padding: 10px;
+  border: none;
+  transition: 0.5s;
+}
+.footer .subscribe form button:hover {
+  background-color: var(--hover-color);
+  cursor: pointer;
+}
+.footer .quick-links {
+  margin-top: 20px;
+}
+.footer .quick-links ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.footer .quick-links ul .first-col,
+.footer .quick-links ul .second-col {
+  width: calc(100% - 40px);
+}
+
+.footer .quick-links ul li {
+  padding: 10px 0;
+  transition: 0.5s transform;
+  position: relative;
+}
+.footer .quick-links ul li:hover {
+  background-color: #7d7d7d;
+  transform: translateX(5px);
+}
+.footer .quick-links ul li a {
+  color: white;
+  text-transform: capitalize;
+}
+.footer .quick-links ul li i {
+  margin-right: 5px;
+}
+.get-details {
+  margin: 15px 0;
+}
+.get-details ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.get-details ul li i {
+  color: var(--main-color);
+  font-size: 22px;
+}
+/*end footer*/
