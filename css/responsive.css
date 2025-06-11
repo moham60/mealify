@@ -7,7 +7,14 @@
   nav .container {
     flex-direction: row;
     justify-content: space-between;
+    
   }
+  .hero-section .content .container{
+    padding: 3rem;
+    width: 85%;
+  }
+  
+  
   .chefs-section .container {
     flex-direction: row;
   }
