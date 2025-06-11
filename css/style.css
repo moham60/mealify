@@ -170,13 +170,12 @@ nav .dark-mode i {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 3.5rem;
+  padding:4rem 1rem;
 }
 .hero-section .content h2 {
-  font-size: 65px;
+  font-size: 4rem;
   font-family: "Amatic SC", system-ui;
   font-weight: 700;
-  max-width: 450px;
   margin: auto;
 }
 .hero-section .content p {
