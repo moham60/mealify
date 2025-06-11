@@ -7,10 +7,13 @@ body {
   padding: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-
   color: var(--default-color);
 }
-
+.dark
+{
+  background-color: black;
+ 
+}
 h2,
 h3,
 h4,
@@ -37,6 +40,9 @@ a {
 .text-center {
   text-align: center;
 }
+.dark-mode .hidden{
+  display: none;
+}
 .vertical-align {
   vertical-align: middle;
 }
@@ -52,19 +58,34 @@ a {
 .w-100 {
   width: 100%;
 }
+
 /*component*/
 .container {
   width: 85%;
   margin: auto;
 }
+.active{
+  color: var(--main-color);
+ 
+}
+.dark{
+  color: var(--bg-white);
+  background-color: var(--default-color);
+}
+.active::before{
+  width: 100%;
+}
+
 /*hero section*/
 .hero-section {
   background-color: var(--bg-secondary);
   
 }
 
+
+
 nav {
-  background-color: white;
+  background-color: var(--bg-white);
   box-shadow: 0 0 15px #eee;
   padding-block: 25px;
   position: fixed;
@@ -128,6 +149,10 @@ nav .container {
   color: var(--main-color);
 }
 
+
+
+
+
 nav .dark-mode i {
   font-size: 25px;
   margin: 0 2px;
@@ -170,7 +195,6 @@ nav .dark-mode i {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding:4rem 1rem;
 }
 .hero-section .content h2 {
   font-size: 4rem;
@@ -203,9 +227,12 @@ nav .dark-mode i {
   gap: 25px;
   align-items: center;
 }
+.hero-section .content .icon{
+  position: relative;
+}
 .hero-section .content .icon a {
   font-weight: 600;
-  position: relative;
+ 
   color: var(--default-color);
   transition: 1s;
 }
@@ -213,18 +240,7 @@ nav .dark-mode i {
   color: var(--hover-color);
 }
 
-.hero-section .content .icon a::before {
-  position: absolute;
-  content: "";
-  left: 18px;
-  top: 50%;
-  transform: translate(-50%, -50%) rotate(40deg);
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  border: 10px solid;
-  border-color: transparent transparent var(--main-color) var(--main-color);
-}
+
 .hero-section .content .icon a i {
   border-radius: 50%;
   background-color: var(--bg-white);
@@ -234,6 +250,7 @@ nav .dark-mode i {
 /*start chefs*/
 .chefs-section {
   padding-block: var(--py-md-section);
+  background-color: var(--bg-white);
 }
 .title h2 {
   text-transform: uppercase;
@@ -265,7 +282,7 @@ nav .dark-mode i {
   cursor: pointer;
 }
 .chefs-section .container .box .text {
-  background-color: white;
+  background-color: var(--bg-white);
   box-shadow: 0 0 10px #eee;
   padding: 15px;
 }
@@ -372,6 +389,7 @@ img {
 /* start contact*/
 .contact {
   padding-block: var(--py-md-section);
+  background-color: var(--bg-white);
 }
 .contact .info-contact {
   display: flex;
@@ -410,9 +428,10 @@ img {
 }
 .contact form {
   margin-top: 20px;
-  padding: 20px 0;
-  background-color: white;
+  padding: 20px 10px;
+  background-color: var(--bg-white);
   box-shadow: 0 0 4px;
+  border-radius: 10px;
 }
 .contact form .flex {
   display: flex;
@@ -423,10 +442,11 @@ img {
 .contact form input {
   padding: 18px 10px;
   display: block;
-  width: 95%;
+  width: 100%;
   margin: 10px auto;
   border: 1px solid #eeeeee;
   transition: 0.3s;
+  border-radius: 3px;
 }
 
 .contact form button {
@@ -446,10 +466,11 @@ img {
 .contact form textarea {
   display: block;
   margin: auto;
-  width: 98%;
+  width: 100%;
   margin-bottom: 20px;
   padding: 10px;
   resize: both;
+  border-radius: 3px;
   border: 1px solid #eeeeee;
   transition: 0.3s;
   resize: vertical;
@@ -480,7 +501,7 @@ textarea:focus {
   flex-wrap: wrap;
   flex-direction: column;
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 
 .footer .logo {
